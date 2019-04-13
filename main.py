@@ -24,13 +24,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.5)
 #decision tree!! whoo hoo
 from sklearn import tree
 
-my_decision_tree_classifier = tree.DecisionTreeClassifier()
+decision_tree_classifier = tree.DecisionTreeClassifier()
 
 #now I want to train the classifier on my trainning data
-my_decision_tree_classifier.fit(X_train, y_train)
+decision_tree_classifier.fit(X_train, y_train)
 
 #Call predict method to classify our testing data
-predictions_from_decision_tree_classifier = my_decision_tree_classifier.predict(X_test)
+predictions_from_decision_tree_classifier = decision_tree_classifier.predict(X_test)
 
 
 print("AWESOME NOW!!! Lets print our iris predictions out.")
@@ -57,6 +57,7 @@ my_K_nearest_neighbors_classifier.fit(X_train, y_train)
 prediction_from_KNeighborsClassifier = my_K_nearest_neighbors_classifier.predict(X_test)
 print("We have another classifier that computes a majority vote of each piece of data")
 print("The predictions from KNN classifier is: ")
+
 print(accuracy_score(y_test, prediction_from_KNeighborsClassifier))
 
 
